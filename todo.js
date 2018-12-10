@@ -33,7 +33,16 @@ function addTarefa(){
 
     document.getElementById("inputTodo").value = '';
 
+    exibeTarefas();
 
 
+
+}
+
+function exibeTarefas(){
+
+    for(let i = 0; i < tarefas.length; i++){
+        console.log(tarefas[i]);
+    }
 }
 
