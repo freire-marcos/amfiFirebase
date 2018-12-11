@@ -1,7 +1,6 @@
 
-
-
 let tarefas = [];
+const retorno = document.getElementById("retorno");
 
 
 function addTarefa(){
@@ -10,39 +9,24 @@ function addTarefa(){
 
     tarefas.push(tarefa);
 
-/*
-    tarefas.push({
-        'tarefa': 'tarefa 1'
-    });
-
-    tarefas.push({
-        tarefa: 'tarefa 2'
-    });
-
-
-
-    for(let i = 0; i < tarefas.length; i++){
-
-        if(tarefas[i]){
-            //tarefas[i].push(tarefa);
-            console.log(tarefas[i]);
-        }
-    }
-
-*/
 
     document.getElementById("inputTodo").value = '';
 
+    escreverDados(tarefa);
+
     exibeTarefas();
-
-
 
 }
 
 function exibeTarefas(){
 
+    retorno.innerHTML = '<ul>'
+    
     for(let i = 0; i < tarefas.length; i++){
-        console.log(tarefas[i]);
-    }
-}
 
+        retorno.innerHTML += "<li>" + tarefas[i] + "</li>";
+
+    }
+
+    retorno.innerHTML += '</ul>';
+}
