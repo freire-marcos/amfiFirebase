@@ -14,19 +14,4 @@ function addTarefa(){
 
     escreverDados(tarefa);
 
-    exibeTarefas();
-
-}
-
-function exibeTarefas(){
-
-    retorno.innerHTML = '<ul>'
-    
-    for(let i = 0; i < tarefas.length; i++){
-
-        retorno.innerHTML += "<li>" + tarefas[i] + "</li>";
-
-    }
-
-    retorno.innerHTML += '</ul>';
 }
